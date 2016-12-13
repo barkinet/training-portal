@@ -10,7 +10,7 @@ class DashboardController extends Controller
 
     public function index() {
       //First thing the user sees when they log in
-
+      return view('dashboard.index');
     }
 
 }
