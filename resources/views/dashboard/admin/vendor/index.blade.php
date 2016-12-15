@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                           {!! Form::label('link', 'Website Link:' ) !!}
-                          {!! Form::text('link', '', ['class'=>'form-control', 'required']) !!}
+                          {!! Form::url('link', '', ['class'=>'form-control', 'required']) !!}
                         </div>
                         <div class="form-group">
                           {!! Form::label('description', 'Short Description:' ) !!}

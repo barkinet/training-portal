@@ -90,9 +90,9 @@
                     <a href="#" data-toggle="collapse" data-target="#menu3"> Create <i class="fa fa-chevron-right pull-right"></i></a>
                     <ul class="nav nav-stacked collapse" id="menu3">
                         <li><a href="{{route('vendor.index')}}"><i class="glyphicon glyphicon-circle"></i> Vendor</a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Training</a></li>
-												<li><a href=""><i class="glyphicon glyphicon-circle"></i> Exam</a></li>
-												<li><a href=""><i class="glyphicon glyphicon-circle"></i> Notice</a></li>
+                        <li><a href="{{route('course.index')}}"><i class="glyphicon glyphicon-circle"></i> Training</a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Exam</a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Notice</a></li>
                     </ul>
                 </li>
             </ul>

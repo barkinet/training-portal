@@ -20,6 +20,10 @@ Route::group(['middleware'=>'auth'], function() {
   Route::group(['middleware'=>'admin'], function() {
     //Admin protected Routes
     Route::resource('/admin/vendor', 'AdminVendorController');
+    Route::resource('/admin/course', 'AdminCourseController');
+//    Route::get('/admin/course/{id}/edit', 'AdminCourseController@CourseEdit')->name('course.');
+
+    Route::resource('/admin/exam', 'AdminExamController');
 
   });
 
