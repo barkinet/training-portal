@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInvitedUsersTable extends Migration
+class CreateCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateInvitedUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('invited_users', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email');
-            $table->string('key');
-            $table->integer('active')->default(1);
-            $table->integer('department_id')->default(1);
-            $table->string('role_id')->default(4);
-            $table->text('message')->nullable();
+            $table->text('description');
+            $table->integer('vendor_id');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ class CreateInvitedUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invited_users');
+        Schema::dropIfExists('courses');
     }
 }

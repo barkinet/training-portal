@@ -5,13 +5,17 @@
 		<meta charset="utf-8">
 		<title>Training Portal</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://use.fontawesome.com/a6faf19577.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.css"/>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.js"></script>
+
 	</head>
 	<body>
 <!-- header -->
@@ -85,7 +89,7 @@
                 <li class="nav-header">
                     <a href="#" data-toggle="collapse" data-target="#menu3"> Create <i class="fa fa-chevron-right pull-right"></i></a>
                     <ul class="nav nav-stacked collapse" id="menu3">
-                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Vendor</a></li>
+                        <li><a href="{{route('vendor.index')}}"><i class="glyphicon glyphicon-circle"></i> Vendor</a></li>
                         <li><a href=""><i class="glyphicon glyphicon-circle"></i> Training</a></li>
 												<li><a href=""><i class="glyphicon glyphicon-circle"></i> Exam</a></li>
 												<li><a href=""><i class="glyphicon glyphicon-circle"></i> Notice</a></li>
@@ -175,8 +179,11 @@
 </div>
 <!-- /.modal -->
 	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
+
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/scripts.js"></script>
+
+		@yield('footer-scripts')
+
 	</body>
 </html>
